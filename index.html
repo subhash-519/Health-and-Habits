@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Health & Habits</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+
+<body>
+
+
+  <aside class="sidebar">
+    <h2>Health & Habits</h2>
+    <nav>
+      <ul>
+        <li>
+          <a href="#" data-page="dashboard" class="active">
+            <span class="icon"><i class="ri-dashboard-fill"></i></span>
+            <span class="media">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-page="habits">
+            <span class="icon"><i class="ri-arrow-up-circle-fill"></i></span>
+            <span class="media">Habits</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-page="health">
+            <span class="icon"><i class="ri-hearts-fill"></i></i></span>
+            <span class="media">Health</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-page="progress">
+            <span class="icon"><i class="ri-progress-3-fill"></i></span>
+            <span class="media">Progress</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-page="profile">
+            <span class="icon"><i class="ri-profile-fill"></i></span>
+            <span class="media">Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-page="settings">
+            <span class="icon"><i class="ri-settings-4-fill"></i></span>
+            <span class="media">Settings</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+
+  <!-- Main -->
+  <main>
+    <div class="topbar">
+      <div class="greeting">
+        <span id="greeting">Welcome, Guest!</span>
+        <span id="date"></span>
+      </div>
+      <button id="theme-toggle">Dark Mode</button>
+    </div>
+
+    <!-- dynamic content will be loaded here  -->
+    <section id="content"></section>
+  </main>
+  <!-- Loader Overlay -->
+  <div id="loader" class="loader-overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>

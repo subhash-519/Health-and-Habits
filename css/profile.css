@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+
+:root {
+    --bg: #f8fafc;
+    --container-bg: ##f8fafc;
+    --card-bg: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --button-bg: #2563eb;
+    --button-hover: #1e40af;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body.dark-mode {
+    --bg: #0f172a;
+    --container-bg: #1e293b;
+    --card-bg: #1e293b;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --button-bg: #facc15;
+    --button-hover: #eab308;
+    --shadow: none;
+
+}
+
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+}
+
+
+.profile-container {
+    max-width: 900px;
+    margin: auto;
+    background: var(--bg);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.title {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+
+.profile-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.card-content {
+    flex: 1;
+}
+
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #6366f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.name {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.email {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+
+.edit-btn {
+    background: var(--button-bg);
+    color: white;
+    border: none;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+body.dark-mode .edit-btn {
+    color: #1e293b;
+}
+
+.edit-btn:hover {
+    background: var(--button-hover);
+}
+
+.details-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.detail {
+    flex: 1 1 calc(50% - 1.5rem);
+}
+
+.label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 0.25rem;
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 700px) {
+    .profile-card {
+        flex-direction: column;
+    }
+
+    .edit-btn {
+        align-self: flex-end;
+    }
+
+    .details-grid {
+        flex-direction: column;
+    }
+
+    .detail {
+        flex: 1 1 100%;
+    }
+}

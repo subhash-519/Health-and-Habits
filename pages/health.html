@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Dashboard</title>
+  <link rel="stylesheet" href="../css/health.css" />
+</head>
+
+<body>
+  <div class="health-dashboard">
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" data-tab="bmi">📊 BMI</button>
+      <button class="tab" data-tab="water">💧 Water</button>
+      <button class="tab" data-tab="nutrition">🥗 Nutrition</button>
+      <button class="tab" data-tab="exercise">🏋️ Exercise</button>
+      <button class="tab" data-tab="sleep">😴 Sleep</button>
+    </div>
+    <!-- bmi -->
+    <div class="tab-content active" id="bmi">
+      <div class="tracker">
+        <h3>BMI Calculator</h3>
+        <div class="input-row">
+          <input type="text" id="weight" placeholder="Weight (kg)" />
+          <input type="text" id="height" placeholder="Height (cm)" />
+          <button id="calculate">Calculate</button>
+        </div>
+        <div class="bmi-result" id="bmi-result"></div>
+      </div>
+
+      <div class="log-area" id="bmi-log">
+        <h4>Logs</h4>
+        <ul id="show-bmi"></ul>
+      </div>
+    </div>
+    <!-- Water Section -->
+
+    <div class="tab-content" id="water">
+      <div class="tracker">
+        <h3>Water Intake</h3>
+        <div class="input-row">
+          <span>Glasses today:</span>
+          <button id="decr-btn">Remove Glass</button>
+          <span id="data">0</span>
+          <button id="inc-btn">Add Glass</button>
+        </div>
+        <div class="input-row">
+          <span>Daily Goal:</span>
+          <input type="number" id="water-goal" min="1" placeholder="e.g 10 glasses" />
+          <button id="addon-water">Set Goal </button>
+        </div>
+      </div>
+      <!-- <div class="log-area" id="water-log">
+          <h4>Logs</h4>
+          <ul id="show-water"></ul> -->
+    </div>
+
+
+    <!-- Nutrition Section -->
+    <div class="tab-content" id="nutrition">
+      <div class="tracker">
+        <h3>Nutrition</h3>
+        <div class="input-row">
+          <input type="text" id="food-item" placeholder="Enter food" />
+
+          <select  title="a" id="calories" required>
+            <option value="10">1-10 cal</option>
+            <option value="20">11-20 cal</option>
+            <option value="30">21-30 cal</option>
+            <option value="40">31-40 cal</option>
+            <option value="50">41-50 cal</option>
+            <option value="60">51-60 cal</option>
+            <option value="70">61-70 cal</option>
+            <option value="80">71-80 cal</option>
+            <option value="90">81-90 cal</option>
+            <option value="100">91-100 cal</option>
+            <option value="110">101-110 cal</option>
+            <option value="120">111-120 cal</option>
+            <option value="130">121-130 cal</option>
+            <option value="140">131-140 cal</option>
+            <option value="150">141-150 cal</option>
+            <option value="160">151-160 cal</option>
+            <option value="170">161-170 cal</option>
+            <option value="180">171-180 cal</option>
+            <option value="190">181-190 cal</option>
+            <option value="200">191-200 cal</option>
+          </select>
+          <button id="add-nutrition">Add Nutrition</button>
+        </div>
+      </div>
+      <div class="log-area" id="nutrition-log">
+        <h4>Logs</h4>
+        <ul id="nutrition-list"></ul>
+      </div>
+    </div>
+
+    <!-- Exercise Section -->
+    <div class="tab-content" id="exercise">
+      <div class="tracker">
+        <h3>Exercise</h3>
+        <div class="input-row">
+          <input type="text" id="exercise-text" placeholder="Enter activity" />
+          <input type="number" placeholder="number" min="5" value="5" id="excercise-time" /> min
+          <button id="excercise-button">Add Excercise</button>
+        </div>
+      </div>
+      <div class="log-area" id="exercise-log">
+        <h4>Logs</h4>
+        <ul id="excercise-list"></ul>
+      </div>
+    </div>
+
+    <!-- Sleep Section -->
+    <div class="tab-content" id="sleep">
+      <div class="tracker">
+        <h3>Sleep Tracker</h3>
+        <div class="input-row">
+          <input type="number" id="sleep-hours" placeholder="Enter Sleep Hours" min="0" max="24" />
+          <input type="number" id="sleep-min" placeholder="Enter Sleep Minutes" min="0" max="59" />
+          <button id="sleep-btn">Add Sleep Hours</button>
+        </div>
+      </div>
+      <div class="log-area" id="sleep-log">
+        <h4>Logs</h4>
+        <ul id="sleep-list"></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background: #f9fafb; /* Light mode background */
+  color: #1e293b;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  flex: 100%;
+}
+
+label {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+input, select {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+  background: #f9fafb;
+  transition: border 0.2s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.form-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  width: 100%;
+}
+
+.btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.btn.cancel {
+  background: #e5e7eb;
+  color: #1e293b;
+}
+
+.btn.cancel:hover {
+  background: #d1d5db;
+}
+
+.btn.save {
+  background: #facc15;
+  color: #1e293b;
+}
+
+.btn.save:hover {
+  background: #eab308;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+body.dark-mode .card {
+  background: #1e293b;
+  box-shadow: none;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+  background: #334155;
+  border: 1px solid #475569;
+  color: #f1f5f9;
+}
+
+body.dark-mode label {
+  color: #cbd5e1;
+}
+
+body.dark-mode .btn.cancel {
+  background: #475569;
+  color: #f1f5f9;
+}
+
+body.dark-mode .btn.cancel:hover {
+  background: #64748b;
+}
+
+body.dark-mode .btn.save {
+  background: #facc15;
+  color: #1e293b;
+}
+
+body.dark-mode .btn.save:hover {
+  background: #eab308;
+}

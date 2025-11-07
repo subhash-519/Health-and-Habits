@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="../css/habbit.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Add New Habit Section -->
+      <div class="card">
+        <h3>Add New Habit</h3>
+        <div class="form-row">
+          <input
+            type="text"
+            placeholder="e.g., Read 10 pages daily"
+            id="habit-input"
+          />
+          <button class="btn">Add Habit</button>
+        </div>
+        <div class="form-row">
+          <label for="frequency">Frequency</label>
+          <select id="frequency">
+            <option value="Daily">Daily</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- All Habits Section -->
+      <div class="card">
+        <h3>All Habits</h3>
+        <ul class="habit-list">
+          <!-- Habits will be listed here -->
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

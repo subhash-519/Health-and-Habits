@@ -1,0 +1,300 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  display: flex;
+  justify-content: center;
+
+}
+
+
+.health-dashboard {
+  margin: auto;
+  width: 100%;
+  max-width: 900px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s;
+}
+
+.health-dashboard:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 30px;
+  background: #f9fafb;
+  color: #1e293b;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.tab.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.3);
+}
+
+.tab:hover {
+  background: #e2e8f0;
+}
+
+
+.tab-content {
+
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+  margin-top: 15px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.tracker {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.tracker h3 {
+  font-size: 18px;
+  margin-bottom: 14px;
+  color: #0f172a;
+}
+
+
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  flex-wrap: wrap;
+}
+
+.input-row input,
+.input-row select,
+.input-row button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  outline: none;
+}
+
+.input-row input {
+  flex: 1;
+  background: #ffffff;
+  color: #1e293b;
+}
+
+.input-row button {
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.input-row button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+
+.log-area {
+  background: #f9fafb;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.log-area h4 {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.log-area ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.log-area li {
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #1e293b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.log-area li:hover {
+  background: #f1f5f9;
+}
+
+
+body.dark-mode .health-dashboard {
+  background: #1f2937;
+  color: #f3f4f6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .tab {
+  background: #334155;
+  border-color: #475569;
+  color: #e2e8f0;
+}
+
+body.dark-mode .tab.active {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: #fff;
+}
+
+body.dark-mode .tracker,
+body.dark-mode .log-area {
+  background: #1f2937;
+  border-color: #475569;
+}
+
+body.dark-mode .input-row input,
+body.dark-mode .input-row select {
+  background: #374151;
+  color: #f3f4f6;
+  border: 1px solid #4b5563;
+}
+
+body.dark-mode .input-row input::placeholder {
+  color: #9ca3af;
+}
+
+body.dark-mode .input-row button {
+  background: #3b82f6;
+}
+
+body.dark-mode .input-row button:hover {
+  background: #2563eb;
+}
+
+body.dark-mode .log-area li {
+  border-color: #475569;
+  color: #f1f5f9;
+  background-color: #374151;
+}
+
+body.dark-mode .tracker h3,
+body.dark-mode .log-area h4 {
+  color: #93c5fd;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+  color: #b91c1c;
+}
+
+@media (max-width: 768px) {
+  .health-dashboard {
+    padding: 16px;
+  }
+
+  .tabs {
+    gap: 8px;
+  }
+
+  .tab {
+    flex: 1 1 calc(50% - 8px);
+    text-align: center;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .input-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-row input,
+  .input-row select,
+  .input-row button {
+    width: 100%;
+  }
+
+  .delete-btn {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .tab {
+    flex: 1 1 100%;
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .tracker h3 {
+    font-size: 16px;
+  }
+
+  .log-area h4 {
+    font-size: 14px;
+  }
+
+  .log-area li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}

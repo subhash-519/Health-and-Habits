@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Dashboard</title>
+  <link rel="stylesheet" href="../css/dasboard.css">
+</head>
+
+<body>
+  <div class="dashboard">
+
+    <!-- Top Section -->
+    <div class="top-section">
+      <!-- Daily Completion -->
+      <div class="card completion">
+        <h3 class="title">Daily Completion</h3>
+        <div id="progress"></div>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="card quick-stats">
+        <h3 class="title">Quick Stats</h3>
+
+        <div class="chid-container">
+          <div class="stat">
+            <p>Calorie</p>
+            <h2><span id="calories"></span><span>/ 3,000</span></h2>
+          </div>
+          <div class="stat">
+            <p>Water</p>
+            <h2><span id="current-glass"></span>/<span id="total-goal"></span></h2>
+          </div>
+          <div class="stat">
+            <p>Sleep</p>
+            <h2><span id="sleep-id"></span> <span>last night</span></h2>
+          </div>
+          <div class="stat">
+            <p>BMI</p>
+            <h2><span id="bmi-id">0</span> <span id="bmi-category"></span></h2>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tip of the Day -->
+      <div class="card tip" >
+        <h3>Tip of the Day</h3>
+        <div class="tip-log-area" id="tip-card">
+          <p><strong>Aim for 7–8 hours of sleep 😴</strong></p>
+          <p>Healthy habits compound over time ✨</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="bottom-section">
+      <!-- Habits -->
+      <div class="card habits">
+        <h3>Today's Habits</h3>
+        <br>
+        <ul id="checkboxes">
+
+        </ul>
+      </div>
+
+      <!-- Activity Timeline -->
+      <div class="card timeline">
+        <h3>Activity Timeline</h3>
+        <ul>
+          <li><span>10:37 AM</span> — Quick add water <strong>+1 glass</strong></li>
+          <li><span>10:37 AM</span> — Quick add water <strong>+1 glass</strong></li>
+          <li><span>10:37 AM</span> — Quick add water <strong>+1 glass</strong></li>
+          <li><span>10:36 AM</span> — Quick add water <strong>+1 glass</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
