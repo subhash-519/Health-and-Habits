@@ -28,7 +28,7 @@ This app helps users track daily habits, monitor progress visually with **ApexCh
 
 ## 📁 Project Structure
 
-health-habit-tracker/
+health-habit/
 ├── index.html
 ├── style.css
 ├── script.js
